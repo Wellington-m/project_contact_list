@@ -8,10 +8,37 @@
     </head>
     <body>
         <div class="container">
-            <form action="">
-                <input type="text" placeholder="Nome" />
-                <input type="number" placeholder="Nº celular" />
+            <form id="registerForm">
+                <input id="name" type="text" placeholder="Nome" required />
+                <input
+                    id="telefone"
+                    type="number"
+                    placeholder="telefone"
+                    required
+                />
+                <button type="submit">Cadastrar</button>
             </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Link</td>
+                        <td>(15) 45678-2345</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Total de contatos:</td>
+                        <td>0</td>
+                    </tr>
+                </tfoot>
+            </table>
         </div>
+        <script src="./main.js"></script>
     </body>
 </html>
