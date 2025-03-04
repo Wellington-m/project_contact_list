@@ -5,20 +5,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Lista de contatos</title>
         <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <div class="container">
-            <form id="registerForm">
-                <input id="name" type="text" placeholder="Nome" required />
-                <input
-                    id="telefone"
-                    type="number"
-                    placeholder="telefone"
-                    required
-                />
-                <button type="submit">Cadastrar</button>
-            </form>
-            <table>
+            <div>
+                <h1>Cadastre seus contatos</h1>
+                <form id="registerForm">
+                    <input id="name" type="text" placeholder="Nome" required />
+                    <input
+                        id="telefone"
+                        type="tel"
+                        placeholder="Telefone"
+                        required
+                    />
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+
+            <table cellspacing="0">
                 <thead>
                     <tr>
                         <th>Nome</th>
@@ -26,10 +36,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <!-- <tr>
                         <td>Link</td>
                         <td>(15) 45678-2345</td>
-                    </tr>
+                    </tr> -->
                 </tbody>
                 <tfoot>
                     <tr>
