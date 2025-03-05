@@ -1,6 +1,8 @@
 const registerForm = document.getElementById("registerForm");
 const contacts = [];
 
+let total = 0;
+
 registerForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -22,4 +24,16 @@ const registerContact = () => {
 
     const contentForm = document.querySelector("tbody");
     contentForm.innerHTML += contact;
+
+    inputName.value = "";
+    inputTelefone.value = "";
+    updateTotalContacts();
+};
+
+const updateTotalContacts = () => {
+    const contactsTotal = document.getElementById("contactsTotal");
+
+    total += 1;
+
+    contactsTotal.innerHTML = total;
 };
