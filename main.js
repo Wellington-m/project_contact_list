@@ -13,7 +13,7 @@ const registerContact = () => {
     const inputName = document.getElementById("name");
     const inputTelefone = document.getElementById("telefone");
 
-    if (isNaN(inputTelefone.value)) {
+    if (!isValidTelefone(inputTelefone.value)) {
         return alert("Digite um telefone válido");
     }
 
@@ -28,6 +28,12 @@ const registerContact = () => {
     inputName.value = "";
     inputTelefone.value = "";
     updateTotalContacts();
+};
+
+const isValidTelefone = (telefone) => {
+    const telefoneLength = telefone.length;
+
+    return !isNaN(telefone) && telefoneLength === 11;
 };
 
 const updateTotalContacts = () => {
